@@ -160,25 +160,25 @@ main {
 }
 @font-face {
     font-family: "Frank Rus";
-    src: url("../fonts/FranksRus-Regular_0.otf") format("truetype");
+    src: url("fonts/FranksRus-Regular_0.otf") format("opentype");
     font-style: normal;
     font-weight: 400;
 }
 @font-face {
     font-family: "PlovDiv Bold";
-    src: url("../fonts/PlovdivDisplay-Bold.otf") format("truetype");
-    font-style: bold;
+    src: url("fonts/PlovdivDisplay-Bold.otf") format("opentype");
+    font-style: normal;
     font-weight: 600;
 }
 @font-face {
     font-family: "PlovDiv Sans";
-    src: url("../fonts/PlovdivSans.otf") format("truetype");
+    src: url("fonts/PlovdivSans.otf") format("opentype");
     font-style: normal;
     font-weight: 400;
 }
 @font-face {
     font-family: "Wally";
-    src: url("../fonts/Wallykazam.ttf") format("truetype");
+    src: url("fonts/Wallykazam.ttf") format("truetype");
     font-style: normal;
     font-weight: 400;
 }
