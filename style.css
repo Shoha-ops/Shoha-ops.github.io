@@ -105,7 +105,7 @@ header {
 }
 
 .social-links a {
-    display: block;
+    display: flex;
     padding: 10px 15px;
     color: #667eea;
     text-decoration: none;
@@ -113,6 +113,13 @@ header {
     font-weight: 600;
     border-radius: 5px;
     transition: background 0.2s ease;
+}
+
+.pfp-logo{
+    padding-right: 10px;
+    width: 20px;
+    height: 20px;
+    align-items: center;
 }
 
 .social-links a:hover {
