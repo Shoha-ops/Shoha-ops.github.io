@@ -157,12 +157,11 @@ main {
     margin-left: 20px;
     margin-right: auto;
 }
-#monday{
+.week{
     margin-bottom: 0;
-}
-#tuesday{
     margin-top: 0;
 }
+
 @font-face {
     font-family: "Frank Rus";
     src: url("fonts/FranksRus-Regular_0.otf") format("opentype");
