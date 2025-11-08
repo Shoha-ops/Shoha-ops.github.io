@@ -181,3 +181,22 @@ main {
     font-style: normal;
     font-weight: 400;
 }
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    #born {
+        font-size: 20px;
+    }
+
+    .bio {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+}
