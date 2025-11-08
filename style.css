@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 5px;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    padding-bottom: 5px;
+    font-family: "Courier New Bold", Courier, monospace;
+}
+
+#born {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    box-sizing: content-box;
+    padding-top: 0;
+    color: #e3d8d8;
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-family: "Courier New", Courier, monospace;
+}
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+#logo-iut{
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 80px;
+    height: auto;
+    left: 10px;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+.profile-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.profile-menu input[type="checkbox"] {
+    display: none;
+}
+
+.profile-pic {
+    cursor: pointer;
+    display: block;
+}
+
+.profile-pic img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic img:hover {
+    transform: scale(1.1);
+}
+
+.social-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 15px;
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.profile-menu input[type="checkbox"]:checked ~ .social-links {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.social-links a {
+    display: block;
+    padding: 10px 15px;
+    color: #667eea;
+    text-decoration: none;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background 0.2s ease;
+}
+
+.social-links a:hover {
+    background: rgba(102, 126, 234, 0.1);
+}
+
+main {
+    padding: 50px 20px;
+}
+
+.bio {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 800px;
+    color: white;
+}
+
+.bio h2 {
+    font-family: "Wally", Courier, monospace;
+    font-size: 36px;
+    margin-top: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.bio p {
+    font-family: "PlovDiv Sans" , Courier, monospace;
+    font-size: 20px;
+    line-height: 1.6;
+}
+#bioinf{
+    margin-left: 20px;
+    margin-right: auto;
+}
+#courses{
+    margin-right: 20px;
+    margin-left: auto;
+}
+#fav-movies{
+    margin-left: 20px;
+    margin-right: auto;
+}
+@font-face {
+    font-family: "Frank Rus";
+    src: url("../fonts/FranksRus-Regular_0.otf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "PlovDiv Bold";
+    src: url("../fonts/PlovdivDisplay-Bold.otf") format("truetype");
+    font-style: bold;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "PlovDiv Sans";
+    src: url("../fonts/PlovdivSans.otf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Wally";
+    src: url("../fonts/Wallykazam.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
