@@ -10,7 +10,6 @@
     <meta name="author" content="Matrizayev Shoxruh">
     <meta name="keywords" content="U2510008 Assignment">
     <link rel="stylesheet" href="style.css">
-    <link rel="" href="">
 </head>
 <body>
     <header>
@@ -43,16 +42,97 @@
 
         <section class="bio" id="courses">
             <h2>My IUT courses</h2>
-            <p class="week" id="monday">I won't lie if I say that Monday is the hardest day of the week, we have Physics 1, then Calculus 1 and after that Physics Experiments.</p>
-            <p class="week" id="tuesday">Tuesday is lighter, OOP and Academic English 1.</p>
-            <p class="week" id="wednesday">On Wednesday I have next classes: Academic English 1 and Physics 1.</p>
-            <p class="week" id="thursday">Thursday is the last day of the academic week for my group, we have Calculus 1, then OOP Lab and finally Academic English Reading.</p>
-            <p class="week" id="sum">That's all. HAO!</p>
+            <div class="text-switcher">
+
+                <input type="radio" name="day-switcher" id="day1" class="slide-radio" checked>
+                <input type="radio" name="day-switcher" id="day2" class="slide-radio">
+                <input type="radio" name="day-switcher" id="day3" class="slide-radio">
+                <input type="radio" name="day-switcher" id="day4" class="slide-radio">
+                <input type="radio" name="day-switcher" id="day5" class="slide-radio">
+
+
+                <div class="slide" id="slide-monday">
+                    <p class="week">Monday: The hardest day. We have Physics 1, then Calculus 1, and after that Physics Experiments.</p>
+                    <div class="slide-nav">
+                        <label for="day2" class="nav-button">Next</label>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide-tuesday">
+                    <p class="week">Tuesday: A bit lighter. OOP and Academic English 1.</p>
+                    <div class="slide-nav">
+                        <label for="day1" class="nav-button prev">Back</label>
+                        <label for="day3" class="nav-button">Next</label>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide-wednesday">
+                    <p class="week">Wednesday: The middle of the road. Academic English 1 and Physics 1 again.</p>
+                    <div class="slide-nav">
+                        <label for="day2" class="nav-button prev">Back</label>
+                        <label for="day4" class="nav-button">Next</label>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide-thursday">
+                    <p class="week">Thursday: The last academic day. Calculus 1, OOP Lab, and finally Academic English Reading.</p>
+                    <div class="slide-nav">
+                        <label for="day3" class="nav-button prev">Back</label>
+                        <label for="day5" class="nav-button">Next</label>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide-sum">
+                    <p class="week">That's all. HAO!</p>
+                    <div class="slide-nav">
+                        <label for="day4" class="nav-button prev">Back</label>
+                        <label for="day1" class="nav-button">Start Over</label>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="bio" id="fav-movies">
             <h2>My favorite movies</h2>
-            <p>Some content about hobbies...</p>
+            <div class="movie-switcher">
+                <input type="radio" name="movie-switcher" id="greetings"  class="slide-movie" checked>
+                <input type="radio" name="movie-switcher" id="ragnarok" class="slide-movie">
+                <input type="radio" name="movie-switcher" id="jojo" class="slide-movie">
+                <input type="radio" name="movie-switcher" id="eternity" class="slide-movie">
+
+                <div class="slidem" id="slide-greetings">
+                    <p class="movie">I'd like to tell about some of my favorite movies. I mean, not movies, I prefer anime, so I'll tell about my favorite animes.</p>
+                    <div class="slide-anime">
+                        <label for="ragnarok" class="nav">Next</label>
+                    </div>
+                </div>
+
+                <div class="slidem" id="slide-ragnarok">
+                    <p class="movie">First anime is Shuumatsu no Valkyrie: Record of Ragnarok. In this anime, every 1000 years, Gods of every pantheon hold a conference to decide, whether or no let humanity continue living. With recent conference, gods decided to destroy the whole mankind, but at the very last second, one of the eldest Valkyries, whose name is Brunhilda, made the proposition to let humanity live by letting them go against the gods in one-on-one fights. Thirteen gods will fight against thirteen human champions. By the way, the "HAO!" that I mentioned before is the phrase of one of the humanity fighters(he is on my pfp), Qin Shihuang Di, it means "Good!" Here is the
+                        <a href="https://www.imdb.com/title/tt13676344/" id="link">link for IMDB</a></p>
+                    <div class="slide-anime">
+                        <label for="greetings" class="nav">Back</label>
+                        <label for="jojo" class="nav">Next</label>
+                    </div>
+                </div>
+
+                <div class="slidem" id="slide-jojo">
+                    <p class="movie">Another favorite of mine is JoJo's Bizarre Adventure. This anime follows the multi-generational saga of the Joestar family, whose members are fated to battle supernatural foes. The story is split into different parts, each with a new protagonist and setting, starting with Jonathan Joestar in 19th-century England who must master the power of Hamon to defeat his vampiric adopted brother, Dio Brando. Later generations wield incredible psychic powers known as Stands, continuing the fight against Dio and his malevolent influence on the world.</p>
+                    <div class="slide-anime">
+                        <label for="ragnarok" class="nav">Back</label>
+                        <label for="eternity" class="nav">Next</label>
+                    </div>
+                </div>
+
+                <div class="slidem" id="slide-eternity">
+                    <p class="movie">The last anime and the most favorite of mine is "To your eternity", I won't lie if I say that this anime is masterpiece, every frame of it. It has pretty simple plot but such a strong execution. It started with a sphere, but not just sphere, sphere that can take looks of those who feels emotional pain, like dying. It can absorb it look and transform into it. At the very beginning it had no meaning in life, no feelings, just an object. So, during its path, it obtained human-factor, such feelings like pain, happiness and others, every second of it makes feel sooooo much different feelings, it can not be described using words... HAO!</p>
+                    <div class="slide-anime">
+                        <label for="jojo" class="nav">Back</label>
+                        <label for="greetings" class="nav">Start Over</label>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </main>
 

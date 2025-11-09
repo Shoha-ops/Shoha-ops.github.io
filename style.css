@@ -139,7 +139,17 @@ main {
     max-width: 800px;
     color: white;
 }
+#fav-movies{
+    padding-right: 1000px;
+}
 
+#link{
+    text-decoration: none;
+    color: white;
+}
+#link:hover{
+    color: #f5b000;
+}
 .bio h2 {
     font-family: "Wally", Courier, monospace;
     font-size: 36px;
@@ -211,4 +221,118 @@ main {
     main {
         padding: 20px 10px;
     }
+}
+
+
+.movie-switcher{
+    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.slide-movie{
+    display: none;
+}
+
+.slidem{
+    display: none;
+    text-align: center;
+}
+
+#greetings:checked ~ #slide-greetings,
+#ragnarok:checked ~ #slide-ragnarok,
+#jojo:checked ~ #slide-jojo,
+#eternity:checked ~ #slide-eternity{
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.text-switcher {
+    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.slide-radio {
+    display: none;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.nav{
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #667eea;
+    color: white;
+    border-radius: 5px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 600;
+    transition: background 0.3s ease-in-out;
+}
+
+.nav:hover{
+    background: #764ba2;
+
+}
+
+.nav.prev{
+    background: #a0a0a0;
+
+}
+
+.nav.prev:hover{
+    background: #808080;
+}
+
+
+
+
+#day1:checked ~ #slide-monday,
+#day2:checked ~ #slide-tuesday,
+#day3:checked ~ #slide-wednesday,
+#day4:checked ~ #slide-thursday,
+#day5:checked ~ #slide-sum {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide-nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #667eea;
+    color: white;
+    border-radius: 5px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    user-select: none;
+}
+
+.nav-button:hover {
+    background: #764ba2;
+}
+
+.nav-button.prev {
+    background: #a0a0a0;
+}
+
+.nav-button.prev:hover {
+    background: #808080;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
