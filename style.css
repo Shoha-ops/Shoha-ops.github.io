@@ -139,15 +139,13 @@ main {
     max-width: 800px;
     color: white;
 }
-#fav-movies{
-    padding-right: 1000px;
-}
 
-#link{
+
+.link{
     text-decoration: none;
     color: white;
 }
-#link:hover{
+.link:hover{
     color: #f5b000;
 }
 .bio h2 {
@@ -226,9 +224,11 @@ main {
 
 .movie-switcher{
     position: relative;
-    padding: 20px;
+    padding-right: 20px;
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.15);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .slide-movie{
@@ -238,6 +238,7 @@ main {
 .slidem{
     display: none;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 #greetings:checked ~ #slide-greetings,
@@ -246,6 +247,26 @@ main {
 #eternity:checked ~ #slide-eternity{
     display: block;
     animation: fadeIn 0.5s ease-in-out;
+}
+
+.movie-img {
+    width: 300px;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    margin-top: 20px;
+}
+
+.movie-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.movie-row p {
+    flex: 1;
 }
 
 .text-switcher {
