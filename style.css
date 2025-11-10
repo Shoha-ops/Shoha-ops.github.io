@@ -396,10 +396,9 @@ main {
 .moods-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    gap: clamp(20px, 15vw, 800px);
+    flex-wrap: nowrap;
     margin-top: 20px;
-    gap: 800px;
 }
 
 .moods {
@@ -407,6 +406,8 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    flex-shrink: 1;
+    min-width: 0;
 }
 
 .mood-text {
@@ -459,4 +460,39 @@ main {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.neig-h{
+     text-align: center;
+    padding-top: 50px;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    padding-bottom: 5px;
+    font-family: "Courier New Bold", Courier, monospace;
+}
+
+.neig-text {
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    font-family: "PlovDiv Sans", Courier, monospace;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.neig{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 50px auto;
+    max-width: 1000px;
+    color: white;
+    opacity: 0;
+    animation: moodFadeIn linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
 }
