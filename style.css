@@ -1,8 +1,15 @@
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 html{
     scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: #667eea #2d2d5f;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -37,10 +44,15 @@ body {
     min-height: 100vh;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     cursor: default;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
 }
 
-* {
-    cursor: default;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 a, button, label, input[type="checkbox"], input[type="radio"] {
@@ -179,6 +191,7 @@ main {
     padding: 40px;
     margin: 50px auto;
     max-width: 800px;
+    width: 100%;
     color: white;
 }
 
@@ -244,189 +257,245 @@ main {
     font-weight: 400;
 }
 
-/* Мобильная оптимизация */
 @media (max-width: 768px) {
-    /* Скроллбар на мобильных */
     ::-webkit-scrollbar {
         width: 6px;
     }
     
-    /* Заголовки */
+    body {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
     h1 {
-        font-size: 28px;
+        font-size: clamp(24px, 6vw, 28px);
         padding: 10px 5px;
+        line-height: 1.2;
     }
 
     #born {
-        font-size: 16px;
+        font-size: clamp(14px, 4vw, 16px);
         padding: 5px 10px;
         text-align: center;
+        word-wrap: break-word;
     }
 
-    /* Хедер */
     header {
         flex-direction: row;
         padding: 10px;
         flex-wrap: nowrap;
+        min-height: 60px;
     }
 
     #logo-iut {
         width: 50px;
         margin-left: 0;
+        flex-shrink: 0;
     }
 
     .header-content {
         padding: 0 10px;
+        flex: 1;
+        min-width: 0;
     }
 
-    /* Профиль меню */
     .profile-menu {
         top: 10px;
         right: 10px;
+        z-index: 1001;
     }
 
     .profile-pic img {
         width: 45px;
         height: 45px;
+        border: 2px solid white;
     }
 
     .social-links {
-        min-width: 120px;
-        padding: 10px;
+        min-width: 140px;
+        padding: 12px;
+        right: -5px;
     }
 
     .social-links a {
-        padding: 8px 10px;
+        padding: 10px 12px;
         font-size: 14px;
+        gap: 8px;
     }
 
-    /* Основной контент */
+    .pfp-logo {
+        width: 18px;
+        height: 18px;
+    }
+
     main {
-        padding: 20px 10px;
+        padding: 15px 5px;
     }
 
     .bio {
-        padding: 20px 15px;
-        margin: 20px 10px;
+        padding: 12px 10px;
+        margin: 12px 5px;
         border-radius: 15px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        max-width: 95%;
     }
 
     .bio h2 {
-        font-size: 24px;
-        padding: 5px 10px;
+        font-size: clamp(18px, 4.5vw, 22px);
+        padding: 4px 6px;
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     .bio p, .week {
-        font-size: 16px;
+        font-size: clamp(13px, 3.5vw, 15px);
         line-height: 1.5;
+        text-align: left;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .logo-bio {
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
+        padding-right: 8px;
     }
 
-    /* Убираем смещения для мобильных */
     #bioinf, #courses, #fav-movies {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 8px;
+        margin-right: 8px;
     }
 
-    /* Фильмы */
+    .text-switcher, .movie-switcher {
+        padding: 12px;
+        border-radius: 12px;
+    }
+
     .movie-row {
         flex-direction: column;
         gap: 15px;
+        align-items: center;
     }
 
     .movie-img {
         width: 100%;
-        max-width: 280px;
+        max-width: 300px;
         margin: 10px auto;
+        border-radius: 8px;
     }
 
     .movie {
-        font-size: 16px;
+        font-size: clamp(15px, 3.8vw, 16px);
+        text-align: left;
     }
 
-    .movie-switcher {
-        padding: 10px;
+    .slide-anime {
+        margin-top: 15px;
     }
 
-    /* Кнопки навигации */
     .nav, .nav-button {
-        padding: 8px 15px;
+        padding: 10px 18px;
         font-size: 14px;
+        border-radius: 8px;
+        min-width: 80px;
+        text-align: center;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .slide-nav {
-        gap: 10px;
+        gap: 12px;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
-    /* Настроения */
+    .mood {
+        padding: 0 8px;
+    }
+
     .mood-text {
-        font-size: 32px;
-        padding: 10px 5px;
+        font-size: clamp(28px, 7vw, 32px);
+        padding: 15px 5px 10px;
     }
 
     .moods-container {
         flex-direction: column;
-        gap: 30px;
+        gap: 25px;
         align-items: center;
+        padding: 0 10px;
+    }
+
+    .moods {
+        width: 100%;
+        max-width: 350px;
     }
 
     .good-mood, .bad-mood {
-        font-size: 20px;
+        font-size: clamp(18px, 4.5vw, 20px);
+        margin-bottom: 12px;
     }
 
     #good img, #sad img {
         width: 100%;
-        max-width: 300px;
+        max-width: 320px;
         height: auto;
+        border-radius: 12px;
     }
 
-    /* Соседи */
     .neig {
-        margin: 30px 10px;
-        padding: 15px;
+        margin: 15px 5px;
+        padding: 12px 10px;
+        border-radius: 15px;
+        max-width: 95%;
     }
 
     .neig-h {
-        font-size: 28px;
-        padding-top: 20px;
+        font-size: clamp(20px, 5vw, 24px);
+        padding-top: 12px;
+        padding-bottom: 8px;
     }
 
     .neig-text {
-        font-size: 16px;
-        padding: 0 10px;
+        font-size: clamp(13px, 3.5vw, 15px);
+        padding: 0 6px;
+        line-height: 1.5;
+        text-align: left;
     }
 
-    /* Footer */
     footer {
-        margin-top: 40px;
+        margin-top: 30px;
     }
 
     .footer-container {
-        padding: 30px 15px 15px;
+        padding: 25px 12px 12px;
     }
 
     .footer-content {
         flex-direction: column;
-        gap: 25px;
+        gap: 20px;
     }
     
     .footer-section {
         text-align: center;
         min-width: unset;
+        padding: 0 10px;
     }
 
     .footer-section h3 {
-        font-size: 20px;
+        font-size: clamp(18px, 4.5vw, 20px);
+        margin-bottom: 12px;
+    }
+
+    .footer-links {
+        gap: 8px;
     }
 
     .footer-links a {
         font-size: 15px;
+        padding: 8px 0;
+        touch-action: manipulation;
     }
     
     .footer-links a:hover {
@@ -434,51 +503,229 @@ main {
     }
 
     .footer-about {
-        font-size: 14px;
+        font-size: clamp(13px, 3.5vw, 14px);
+        line-height: 1.7;
+    }
+
+    .footer-bottom {
+        padding-top: 15px;
     }
 
     .footer-bottom p {
-        font-size: 12px;
+        font-size: clamp(11px, 3vw, 12px);
+        padding: 0 10px;
     }
 }
 
-/* Дополнительная оптимизация для очень маленьких экранов */
 @media (max-width: 480px) {
     h1 {
         font-size: 22px;
+        padding: 8px 3px;
     }
 
     #born {
-        font-size: 14px;
+        font-size: 13px;
+        padding: 3px 8px;
+    }
+
+    #logo-iut {
+        width: 40px;
+    }
+
+    .profile-pic img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-links {
+        min-width: 130px;
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px 3px;
     }
 
     .bio {
-        padding: 15px 10px;
+        padding: 10px 8px;
+        margin: 10px 3px;
+        border-radius: 12px;
+        max-width: 96%;
     }
 
     .bio h2 {
-        font-size: 20px;
+        font-size: 17px;
+        padding: 4px;
     }
 
-    .bio p {
-        font-size: 14px;
+    .bio p, .week, .movie {
+        font-size: 13px;
+        line-height: 1.4;
     }
 
-    .mood-text {
-        font-size: 26px;
+    .logo-bio {
+        width: 22px;
+        height: 22px;
     }
 
-    .neig-h {
-        font-size: 22px;
+    .text-switcher, .movie-switcher {
+        padding: 10px 8px;
     }
 
-    .neig-text {
-        font-size: 14px;
+    .movie-img {
+        max-width: 260px;
     }
 
     .nav, .nav-button {
-        padding: 6px 12px;
+        padding: 8px 14px;
         font-size: 13px;
+        min-width: 70px;
+    }
+
+    .slide-nav {
+        gap: 8px;
+    }
+
+    .mood {
+        padding: 0 5px;
+    }
+
+    .mood-text {
+        font-size: 24px;
+        padding: 12px 3px 8px;
+    }
+
+    .moods-container {
+        gap: 20px;
+        padding: 0 5px;
+    }
+
+    .good-mood, .bad-mood {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    #good img, #sad img {
+        max-width: 280px;
+        border-radius: 10px;
+    }
+
+    .neig {
+        margin: 12px 3px;
+        padding: 10px 8px;
+        max-width: 96%;
+    }
+
+    .neig-h {
+        font-size: 18px;
+        padding-top: 10px;
+    }
+
+    .neig-text {
+        font-size: 13px;
+        padding: 0 4px;
+        line-height: 1.4;
+    }
+
+    footer {
+        margin-top: 25px;
+    }
+
+    .footer-container {
+        padding: 20px 10px 10px;
+    }
+
+    .footer-content {
+        gap: 18px;
+    }
+
+    .footer-section {
+        padding: 0 5px;
+    }
+
+    .footer-section h3 {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+        padding: 6px 0;
+    }
+
+    .footer-about {
+        font-size: 13px;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    #born {
+        font-size: 11px;
+    }
+
+    .bio {
+        padding: 8px 6px;
+        margin: 8px 2px;
+        max-width: 98%;
+    }
+
+    .bio h2 {
+        font-size: 16px;
+        padding: 3px;
+    }
+
+    .bio p, .week, .movie {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .logo-bio {
+        width: 20px;
+        height: 20px;
+    }
+
+    .nav, .nav-button {
+        padding: 7px 12px;
+        font-size: 12px;
+        min-width: 65px;
+    }
+
+    .mood-text {
+        font-size: 20px;
+    }
+
+    .good-mood, .bad-mood {
+        font-size: 15px;
+    }
+
+    #good img, #sad img {
+        max-width: 240px;
+    }
+
+    .neig {
+        padding: 8px 6px;
+        margin: 10px 2px;
+        max-width: 98%;
+    }
+
+    .neig-h {
+        font-size: 17px;
+        padding-top: 8px;
+    }
+
+    .neig-text {
+        font-size: 12px;
+        padding: 0 3px;
+        line-height: 1.3;
     }
 }
 
@@ -751,6 +998,7 @@ main {
     padding: 10px;
     margin: 50px auto;
     max-width: 1000px;
+    width: 100%;
     color: white;
     opacity: 0;
     animation: moodFadeIn linear forwards;
