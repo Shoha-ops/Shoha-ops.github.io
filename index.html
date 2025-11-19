@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shoxruh Matrizayev - Portfolio</title>
+    <meta name="description" content="Portfolio of Shoxruh Matrizayev - IUT Student">
+    <meta name="author" content="Matrizayev Shoxruh">
+    <meta name="keywords" content="Portfolio, IUT, Student, Web Development">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <input type="checkbox" id="theme-toggle" class="theme-checkbox">
+    <label for="theme-toggle" class="theme-switcher" aria-label="Toggle theme">
+        <span class="theme-icon sun">☀️</span>
+        <span class="theme-icon moon">🌙</span>
+    </label>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <input type="checkbox" id="burger-toggle" class="burger-checkbox">
+            <label for="burger-toggle" class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <div class="navbar-brand">
+                <img src="img/symbol.svg" alt="IUT Logo" class="navbar-logo">
+                <span class="navbar-title">Shoxruh Portfolio</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#bioinf" class="nav-link">About</a></li>
+                <li><a href="#courses" class="nav-link">Courses</a></li>
+                <li><a href="#fav-movies" class="nav-link">Anime</a></li>
+                <li><a href="#neighbors" class="nav-link">Neighbors</a></li>
+            </ul>
+            
+            <div class="navbar-profile">
+                <input type="checkbox" id="profile-toggle">
+                <label for="profile-toggle" class="profile-pic">
+                    <img src="img/pfp.jpg" alt="Profile">
+                </label>
+                <div class="social-dropdown">
+                    <a href="https://www.instagram.com/sh0hruh228/" target="_blank"><img src="img/insta.svg" alt="Instagram" class="social-icon">Instagram</a>
+                    <a href="https://t.me/shohjet" target="_blank"><img src="img/tg.svg" alt="Telegram" class="social-icon">Telegram</a>
+                    <a href="https://github.com/Shoha-ops" target="_blank"><img src="img/github.svg" alt="GitHub" class="social-icon">GitHub</a>
+                    <a href="https://www.linkedin.com/in/shoxruh-matrizayev-4aa65238a/" target="_blank"><img src="img/linked.svg" alt="LinkedIn" class="social-icon">LinkedIn</a>
+                    <a href="mailto:nvlpvvplv@gmail.com"><img src="img/mail.svg" alt="Email" class="social-icon">Email</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Shoxruh Matrizayev</h1>
+            <p class="hero-subtitle">Student ID: U2510008</p>
+            <p class="hero-info">Born: 09.09.2007 | Entered IUT: 02.05.2025</p>
+            <p class="hero-tagline">CIE 25-01 | INHA University in Tashkent</p>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="rgba(255,255,255,0.1)"></path>
+            </svg>
+        </div>
+    </header>
+
+    <main>
+        <section class="bio" id="bioinf">
+            <h2><img src="img/about.svg" alt="movies-logo" id="movies-logo" class="logo-bio">My bio information</h2>
+            <p>My name is Shoxruh Matrizayev, actual Freshman of INHA University in Tashkent, studying in the group CIE 25-01. I love reading some comics and vibecoding(💀). That's all, I guess? Oh yeah, and also... HAO!</p>
+        </section>
+
+        <section class="bio" id="courses">
+            <h2><img src="img/study.svg" alt="movies-logo" id="movies-logo" class="logo-bio">My IUT courses</h2>
+            <div class="text-switcher">
+
+                <input type="radio" name="day-switcher" id="day1" class="slide-radio" checked>
+                <input type="radio" name="day-switcher" id="day2" class="slide-radio">
+                <input type="radio" name="day-switcher" id="day3" class="slide-radio">
+                <input type="radio" name="day-switcher" id="day4" class="slide-radio">
+                <input type="radio" name="day-switcher" id="day5" class="slide-radio">
+
+
+                <div class="slide" id="slide-monday">
+                    <p class="week">Monday: The hardest day. We have Physics 1, then Calculus 1, and after that Physics Experiments.</p>
+                    <div class="slide-nav">
+                        <label for="day2" class="nav-button">Next</label>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide-tuesday">
+                    <p class="week">Tuesday: A bit lighter. OOP and Academic English 1.</p>
+                    <div class="slide-nav">
+                        <label for="day1" class="nav-button prev">Back</label>
+                        <label for="day3" class="nav-button">Next</label>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide-wednesday">
+                    <p class="week">Wednesday: The middle of the road. Academic English 1 and Physics 1 again.</p>
+                    <div class="slide-nav">
+                        <label for="day2" class="nav-button prev">Back</label>
+                        <label for="day4" class="nav-button">Next</label>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide-thursday">
+                    <p class="week">Thursday: The last academic day. Calculus 1, OOP Lab, and finally Academic English Reading.</p>
+                    <div class="slide-nav">
+                        <label for="day3" class="nav-button prev">Back</label>
+                        <label for="day5" class="nav-button">Next</label>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide-sum">
+                    <p class="week">That's all. HAO!</p>
+                    <div class="slide-nav">
+                        <label for="day4" class="nav-button prev">Back</label>
+                        <label for="day1" class="nav-button">Start Over</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bio" id="fav-movies">
+            <h2><img src="img/movies.svg" alt="movies-logo" id="movies-logo" class="logo-bio">My favorite movies</h2>
+            <div class="movie-switcher">
+                <input type="radio" name="movie-switcher" id="greetings"  class="slide-movie" checked>
+                <input type="radio" name="movie-switcher" id="ragnarok" class="slide-movie">
+                <input type="radio" name="movie-switcher" id="jojo" class="slide-movie">
+                <input type="radio" name="movie-switcher" id="eternity" class="slide-movie">
+
+                <div class="slidem" id="slide-greetings">
+                    <p class="movie">I'd like to tell about some of my favorite movies. I mean, not movies, I prefer anime, so I'll tell about my favorite animes.</p>
+                    <div class="slide-anime">
+                        <label for="ragnarok" class="nav">Next</label>
+                    </div>
+                </div>
+
+                <div class="slidem" id="slide-ragnarok">
+                    <div class="movie-row">
+                        <p class="movie">First anime is Shuumatsu no Valkyrie: Record of Ragnarok. In this anime, every 1000 years, Gods of every pantheon hold a conference to decide, whether or no let humanity continue living. With recent conference, gods decided to destroy the whole mankind, but at the very last second, one of the eldest Valkyries, whose name is Brunhilda, made the proposition to let humanity live by letting them go against the gods in one-on-one fights. Thirteen gods will fight against thirteen human champions. By the way, the "HAO!" that I mentioned before is the phrase of one of the humanity fighters(he is on my pfp), Qin Shihuang Di, it means "Good!" Here is the
+                            <a href="https://www.imdb.com/title/tt13676344/" class="link">link for IMDB</a>.</p>
+                        <img src="img/ragnarok.jpg" alt="ragnarok" class="movie-img">
+                    </div>
+
+                    <div class="slide-anime">
+                        <label for="greetings" class="nav prev">Back</label>
+                        <label for="jojo" class="nav">Next</label>
+                    </div>
+                </div>
+
+                <div class="slidem" id="slide-jojo">
+                    <div class="movie-row">
+                        <p class="movie">Another favorite of mine is JoJo's Bizarre Adventure. This anime follows the multi-generational saga of the Joestar family, whose members are fated to battle supernatural foes. The story is split into different parts, each with a new protagonist and setting, starting with Jonathan Joestar in 19th-century England who must master the power of Hamon to defeat his vampiric adopted brother, Dio Brando. Later generations wield incredible psychic powers known as Stands, continuing the fight against Dio and his malevolent influence on the world. Here is the
+                            <a href="https://www.imdb.com/title/tt2359704/" class="link">link for IMDB</a>.</p>
+                        <img src="img/jojo.jpg" alt="jojo" class="movie-img">
+                    </div>
+                    <div class="slide-anime">
+                        <label for="ragnarok" class="nav prev">Back</label>
+                        <label for="eternity" class="nav">Next</label>
+                    </div>
+                </div>
+
+                <div class="slidem" id="slide-eternity">
+                    <div class="movie-row">
+                        <p class="movie">The last anime and the most favorite of mine is "To your eternity", I won't lie if I say that this anime is masterpiece, every frame of it. It has pretty simple plot but such a strong execution. It started with a sphere, but not just sphere, sphere that can take looks of those who feels emotional pain, like dying. It can absorb it look and transform into it. At the very beginning it had no meaning in life, no feelings, just an object. So, during its path, it obtained human-factor, such feelings like pain, happiness and others, every second of it makes feel sooooo much different feelings, it can not be described using words. Here is the <a href="https://www.imdb.com/title/tt12063450/" class="link">link for IMDB</a>... HAO!</p>
+                        <img src="img/eternity.jpg" alt="eternity" class="movie-img">
+                    </div>
+                    <div class="slide-anime">
+                        <label for="jojo" class="nav prev">Back</label>
+                        <label for="greetings" class="nav">Start Over</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="mood">
+            <h2 class="mood-text">My moods:</h2>
+            <div class="moods-container">
+                <div class="moods" id="good">
+                    <h4 class="good-mood">Good mood:</h4>
+                    <img src="img/good.jpg" alt="good">
+                </div>
+                <div class="moods" id="sad">
+                    <h4 class="bad-mood">Sad mood:</h4>
+                    <img src="img/sad.jpg" alt="bad">
+                </div>
+            </div>
+        </div>
+
+        <section class="bio" id="neighbors">
+            <h2><img src="img/about.svg" alt="neighbors-logo" class="logo-bio">About my neighbors</h2>
+            <p>I live in a dormitory of INHA University in Tashkent. My neighbors are mostly freshmen like me, so we often hang out together, study together, and sometimes play games together. They are all very friendly and helpful, which makes living in the dormitory a pleasant experience. We also have some upperclassmen as neighbors who are always willing to share their experiences and give advice on how to navigate university life. Overall, I feel lucky to have such great neighbors who contribute to a positive living environment.</p>
+            <h2><img src="img/about.svg" alt="facts-logo" class="logo-bio">Facts about my neighbors</h2>
+            <p>Actually, everyone have their interesting side, for example one of them once said that Python is NOT a real programming language because it is too easy to learn and use. Actually, he is writing programs on Python right now🤣🤣🤣</p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>My Social Links</h3>
+                    <div class="footer-links">
+                        <a href="https://www.instagram.com/sh0hruh228/" target="_blank">Instagram</a>
+                        <a href="https://t.me/shohjet" target="_blank">Telegram</a>
+                        <a href="https://github.com/Shoha-ops" target="_blank">GitHub</a>
+                        <a href="https://www.linkedin.com/in/shoxruh-matrizayev-4aa65238a/" target="_blank">LinkedIn</a>
+                        <a href="mailto:nvlpvvplv@gmail.com">Email</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>GitHub Related</h3>
+                    <div class="footer-links">
+                        <a href="https://github.com/Shoha-ops/Shoha-ops.github.io" target="_blank">Repository</a>
+                        <a href="https://shoha-ops.github.io/" target="_blank">GitHub Page</a>
+                        <a href="https://github.com/Shoha-ops" target="_blank">Profile</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p class="footer-about">Freshman student at INHA University in Tashkent<br>CIE 25-01 Group<br>Web Development Assignment</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Shoxruh Matrizayev (U2510008). HAO!</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
